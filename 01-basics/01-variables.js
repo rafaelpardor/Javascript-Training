@@ -3,5 +3,4 @@ var edad = 20
 
 nombre = 'Rafael'
 
-console.log('Hola ' + nombre + ' ' + apellido)
-console.log('Tengo ' + edad  + ' años')
+console.log(`Hola, soy ${nombre} ${apellido} y tengo ${edad} años`)
