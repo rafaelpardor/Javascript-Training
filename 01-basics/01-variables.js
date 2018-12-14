@@ -1,6 +1,7 @@
-var nombre
-var apellido = "Pardo"
+var nombre, apellido = 'Pardo'
+var edad = 20
 
-nombre = "Rafael"
+nombre = 'Rafael'
 
-console.log("Hola " + nombre + " " + apellido)
+console.log('Hola ' + nombre + ' ' + apellido)
+console.log('Tengo ' + edad  + ' años')
