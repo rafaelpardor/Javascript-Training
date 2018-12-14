@@ -3,9 +3,11 @@
 var nombre = 'Rafael'
 console.log(nombre)
 
-function imprimirNombreEnMayusculas() {
+// Funcion con alcanze local
+function imprimirNombreEnMayusculas(nombre) {
     nombre = nombre.toUpperCase()
-    console.log(nombre) // modificada
+    console.log(nombre)
 }
 
-imprimirNombreEnMayusculas()
+console.log(nombre)
+imprimirNombreEnMayusculas(nombre)
