@@ -4,8 +4,10 @@ var rafael = {
     edad: 20,
 }
 
+const MAYORIA_DE_EDAD = 18
+
 function esMayorDeEdad(persona) {
-    return persona.edad >= 18
+    return persona.edad >= MAYORIA_DE_EDAD
 }
 
 function imprimirSiEsMayorDeEdad(persona) {
