@@ -16,20 +16,12 @@ function imprimirNombreEnMayusculas(persona) {
     console.log(nombre.toUpperCase())
 }
 
-function imprimirNombreYEdad(persona) {
-    var { nombre } = persona
-    var { apellido } = persona
-    var { edad } = persona
-    console.log(`Hola, me llamo ${nombre} ${apellido} y tengo ${edad} años.`)
-}
-
 imprimirNombreEnMayusculas(rafael)
 imprimirNombreEnMayusculas(juan)
 imprimirNombreEnMayusculas({ nombre: 'Rafa' })
-imprimirNombreYEdad(rafael)
-imprimirNombreYEdad(juan)
-imprimirNombreYEdad({ 
-    nombre: 'Harry',
-    apellido: 'Potter',
-    edad: '12'
-})
+
+// Javascript se comporta diferente con los objetos.
+// el valor de edad en el objeto va a ser modificado
+function cumpleaños(persona) {
+    persona.edad += 1
+}
