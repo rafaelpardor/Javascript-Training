@@ -22,6 +22,12 @@ imprimirNombreEnMayusculas({ nombre: 'Rafa' })
 
 // Javascript se comporta diferente con los objetos.
 // el valor de edad en el objeto va a ser modificado
-function cumpleaños(persona) {
+// Se pasan por referencia, por eso su cambio tambien afecta fuera de la funcion
+function cumpleaños1(persona) {
     persona.edad += 1
+}
+
+// En este caso no modifica el objeto.
+function cumpleaños2(edad) {
+    edad += 1
 }
