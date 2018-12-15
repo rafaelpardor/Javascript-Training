@@ -7,7 +7,7 @@ var rafael = {
 const MAYORIA_DE_EDAD = 18
 
 // Solo si hace un return
-const esMayorDeEdad = persona => persona.edad >= MAYORIA_DE_EDAD
+const esMayorDeEdad = ({edad}) => edad >= MAYORIA_DE_EDAD
 
 function imprimirSiEsMayorDeEdad(persona) {
     if (esMayorDeEdad(persona)) {
