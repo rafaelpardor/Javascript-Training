@@ -1,6 +1,10 @@
-var x = 4,
-    y = "4"
+var rafael = {
+    nombre: 'Rafael'
+}
 
-console.log(x == y)
-console.log(x === y)
+var otroRafael = {
+    nombre: 'Rafael'
+}
 
+console.log(rafael == otroRafael)
+console.log(rafael.nombre == otroRafael.nombre)
