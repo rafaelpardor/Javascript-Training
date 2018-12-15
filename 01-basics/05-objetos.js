@@ -11,9 +11,10 @@ var juan = {
 }
 
 // Funcion con alcanze local
-function imprimirNombreEnMayusculas(persona) {
-    console.log(persona.nombre.toUpperCase())
+function imprimirNombreEnMayusculas({ nombre }) {
+    console.log(nombre.toUpperCase())
 }
 
 imprimirNombreEnMayusculas(rafael)
 imprimirNombreEnMayusculas(juan)
+imprimirNombreEnMayusculas({nombre: 'Rafa'})
