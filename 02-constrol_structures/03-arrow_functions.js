@@ -17,4 +17,13 @@ function imprimirSiEsMayorDeEdad(persona) {
     }
 }
 
+function permitirAcceso(persona) {
+    if (!esMayorDeEdad(persona)) {
+        console.log('ACCESO DENEGADO')
+    } else {
+        console.log('Puede pasar')
+    }
+}
+
 imprimirSiEsMayorDeEdad(rafael)
+permitirAcceso(rafael)
