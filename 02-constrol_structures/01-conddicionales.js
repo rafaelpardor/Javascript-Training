@@ -1,7 +1,7 @@
 var rafael = {
     nombre: 'Rafael',
     apellido: 'Pardo Rodriguez',
-    edad: '20',
+    edad: 20,
     programador: true,
     drone: false,
     cocinero: true
@@ -15,7 +15,7 @@ function imprimirProfesiones(persona) {
     }
     if (persona.drone) {
         console.log('Sabe manejar drones,')
-    }else{
+    } else {
         console.log('No sabe manejar drones')
     }
     if (persona.cocinero) {
@@ -23,4 +23,13 @@ function imprimirProfesiones(persona) {
     }
 }
 
+function esMayorDeEdad(persona){
+    if (persona.edad >= 18){
+        console.log(`${persona.nombre} es mayor de edad.`)
+    } else {
+        console.log(`${persona.nombre} aún no es mayor de edad.`)
+    }
+}
+
 imprimirProfesiones(rafael)
+esMayorDeEdad(rafael)
