@@ -18,13 +18,16 @@ var alejandro = {
     apellido: 'Pardo Chávez',
     altura: 1.67
 }
+var personas = [rafael, juan, martha, alejandro]
 
 const esAlta = ({altura}) => altura >= 1.80
+const esBaja = ({altura}) => altura <= 1.70
 
-var personas = [rafael, juan, martha, alejandro]
 
 console.table(personas)
 
 var personasAltas = personas.filter(esAlta)
+var personasBajas = personas.filter(esBaja)
 
 console.log(personasAltas)
+console.log(personasBajas)
