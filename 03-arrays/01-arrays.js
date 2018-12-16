@@ -1,7 +1,7 @@
 var rafael = {
     nombre: 'Rafael',
     apellido: 'Pardo Rodriguez',
-    altura: 1.75
+    altura: 1.80
 }
 var juan = {
     nombre: 'Juan',
@@ -19,7 +19,7 @@ var alejandro = {
     altura: 1.67
 }
 
-const esAlta = persona => persona.altura > 1.8
+const esAlta = ({altura}) => altura >= 1.80
 
 var personas = [rafael, juan, martha, alejandro]
 
