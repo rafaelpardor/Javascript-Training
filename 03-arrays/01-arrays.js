@@ -20,14 +20,11 @@ var alejandro = {
 }
 var personas = [rafael, juan, martha, alejandro]
 
-const esAlta = ({altura}) => altura >= 1.80
-const esBaja = ({altura}) => altura <= 1.70
-
+const pasarAlturasACms = persona => ({...persona, altura: persona.altura * 100})
 
 console.table(personas)
 
-var personasAltas = personas.filter(esAlta)
-var personasBajas = personas.filter(esBaja)
+// Devuelve un array nuevo
+var personasCms = personas.map(pasarAlturasACms)
 
-console.log(personasAltas)
-console.log(personasBajas)
+console.log(personasCms)
