@@ -9,22 +9,18 @@ Persona.prototype.saludar = function () {
     console.log(`Hola, me  llamo ${this.nombre} ${this.apellido}`)
 }
 
+// Es importante entender el scope de los prototypes
 Persona.prototype.saberAltura = function () {
-    if (this.altura >= 1.80) {
-        console.log(`Soy alto porque mido ${this.altura}`)
-    } else {
-        console.log(`Soy bajo porque mido ${this.altura}`)
-
-    }
+    return this.altura >= 1.80
 }
 
 // Se crea un nuevo objeto
 var rafael = new Persona('Rafael', 'Pardo R.', 20, 1.80)
 var juan = new Persona('Juan', 'Pardo R.', 24, 1.74)
-console.table(rafael)
-console.table(juan)
+console.log(rafael)
+console.log(juan)
 
 rafael.saludar()
-rafael.saberAltura()
+console.log(rafael.saberAltura())
 juan.saludar()
-juan.saberAltura()
+console.log(juan.saberAltura())
