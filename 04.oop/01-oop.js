@@ -1,39 +1,26 @@
-// Funcion para heredar
-function heredaDe(prototipoHijo, prototipoPadre) {
-    var fn = function () {}
-
-    fn.prototype = prototipoPadre.prototype
-    prototipoHijo.prototype = new fn
-    prototipoHijo.prototype.constructor = prototipoHijo
+// Clase para crear una persona
+class Persona {
+    constructor(nombre, apellido, edad, altura) {
+        this.nombre = nombre
+        this.apellido = apellido
+        this.edad = edad
+        this.altura = altura
+    }
+    saludar() {
+        console.log(`Hola, me  llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años.`)
+    }
+    saberAltura() {
+        return this.altura >= 1.80
+    }
 }
 
-// Funcion para crear una persona
-function Persona(nombre, apellido, edad, altura) {
-    this.nombre = nombre
-    this.apellido = apellido
-    this.edad = edad
-    this.altura = altura
-}
-
-Persona.prototype.saludar = function () {
-    console.log(`Hola, me  llamo ${this.nombre} ${this.apellido}`)
-}
-
-Persona.prototype.saberAltura = function () {
-    return this.altura >= 1.80
-}
-
-// Funcion 'heredara' de persona
-// para crear un desarrollador
-function Desarrollador(nombre, apellido) {
-    this.nombre = nombre
-    this.apellido = apellido
-}
-
-heredaDe(Desarrollador, Persona)
-
-Desarrollador.prototype.saludar = function () {
-    console.log(`Hola, soy ${this.nombre} ${this.apellido} y soy desarrollador.`)
+class Desarrollador extends Persona {
+    constructor(nombre, apellido, edad, altura) {
+        super(nombre, apellido, edad, altura)
+    }
+    saludar() {
+        console.log(`Hola, soy ${this.nombre} ${this.apellido} y soy desarrollador.`)
+    }
 }
 
 // Se crea un nuevo objeto
@@ -45,4 +32,3 @@ console.log(juan)
 rafael.saludar()
 console.log(rafael.saberAltura())
 juan.saludar()
-console.log(juan.saberAltura())
