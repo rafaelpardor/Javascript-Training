@@ -5,11 +5,11 @@ function Persona(nombre, apellido, edad, altura) {
     this.altura = altura
 }
 
+// Recuerda que dentro de la arrow function, this está haciendo referencia al espacio global, a windows.
 Persona.prototype.saludar = function () {
     console.log(`Hola, me  llamo ${this.nombre} ${this.apellido}`)
 }
 
-// Es importante entender el scope de los prototypes
 Persona.prototype.saberAltura = function () {
     return this.altura >= 1.80
 }
