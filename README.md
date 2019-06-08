@@ -1,2 +1,3 @@
 # JavaScript
-Working with javascript
+
+Working with javascript, and his properties.
