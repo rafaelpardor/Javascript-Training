@@ -1,15 +1,16 @@
 var rafael = {
-    nombre: 'Rafael'
-}
+  nombre: "Rafael"
+};
 
 var otroRafael = {
-    nombre: 'Rafael'
-}
+  nombre: "Rafael"
+};
 
 var otroRafa = {
-    ...rafael
-}
+  ...rafael
+};
 
-console.log(rafael == otroRafael)
-console.log(rafael.nombre == otroRafael.nombre)
-console.log(otroRafa == rafael)
+console.log(rafael == otroRafael);
+console.log(rafael.nombre == otroRafael.nombre);
+console.log(otroRafa == rafael);
+console.log(rafael.nombre == otroRafa.nombre)

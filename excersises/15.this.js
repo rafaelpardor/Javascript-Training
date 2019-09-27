@@ -6,3 +6,5 @@ class Persona {
 }
 
 const rafael = new Persona('Rafael', ['Valeria', 'Juan'])
+
+console.log(rafael)

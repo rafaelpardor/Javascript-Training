@@ -3,12 +3,14 @@ var rafael = {
     apellido: 'Pardo Rodriguez',
     edad: 20,
 }
+console.log(rafael)
 
 var juan = {
     nombre: 'Juan',
     apellido: 'Pardo Rodriguez',
     edad: 24,
 }
+console.log(juan)
 
 function imprimirNombreEnMayusculas(persona) {
     // var nombre = persona.nombre
