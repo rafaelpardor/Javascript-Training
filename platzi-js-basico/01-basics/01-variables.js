@@ -1,7 +1,5 @@
-console.log("Lo basico de las variables. \n")
+var firstName, lastName = "Pardo";
+firstName = "Rafael";
+let age = 21;
 
-var nombre,
-  apellido = "Pardo";
-nombre = "Rafael";
-var edad = 20;
-console.log(`Hola, soy ${nombre} ${apellido} y tengo ${edad} años`);
+console.log(`Hola, soy ${firstName} ${lastName} y tengo ${age} años`);
