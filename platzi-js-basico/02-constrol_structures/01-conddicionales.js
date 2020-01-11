@@ -1,35 +1,35 @@
-var rafael = {
-    nombre: 'Rafael',
-    apellido: 'Pardo Rodriguez',
-    edad: 20,
-    programador: true,
+var person1 = {
+    firstName: 'Rafael',
+    lastName: 'Pardo Rodriguez',
+    age: 20,
+    programmer: true,
     drone: false,
-    cocinero: true
+    coocker: true
 }
 
-function imprimirProfesiones(persona) {
-    console.log(`${persona.nombre} es:`)
+function printProffessions(person) {
+    console.log(`${person.firstName} es:`)
 
-    if (persona.programador) {
-        console.log('Programador')
+    if (person.programmer) {
+        console.log('\tProgramador')
     }
-    if (persona.drone) {
-        console.log('Sabe manejar drones,')
+    if (person.drone) {
+        console.log('\tSabe manejar drones,')
     } else {
-        console.log('No sabe manejar drones')
+        console.log('\tNo sabe manejar drones')
     }
-    if (persona.cocinero) {
-        console.log('Cocinero')
+    if (person.coocker) {
+        console.log('\tCocinero')
     }
 }
 
-function esMayorDeEdad(persona){
-    if (persona.edad >= 18){
-        console.log(`${persona.nombre} es mayor de edad.`)
+function isOverAge(person) {
+    if (person.age >= 18){
+        console.log(`${person.firstName} es mayor de edad.`)
     } else {
-        console.log(`${persona.nombre} aún no es mayor de edad.`)
+        console.log(`${person.lastName} aún no es mayor de edad.`)
     }
 }
 
-imprimirProfesiones(rafael)
-esMayorDeEdad(rafael)
+printProffessions(person1)
+isOverAge(person1)
