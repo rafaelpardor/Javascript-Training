@@ -1,39 +1,39 @@
-var rafael = {
-    nombre: 'Rafael',
-    apellido: 'Pardo Rodriguez',
-    edad: 10,
+var person1 = {
+    firstName: 'Rafael',
+    lastName: 'Pardo Rodriguez',
+    age: 20,
 }
 
-const MAYORIA_DE_EDAD = 18
+const OVER_AGE = 18
 
 // Solo si hace un return
-const esMayorDeEdad = ({edad}) => edad >= MAYORIA_DE_EDAD
-const esMenorDeEdad = ({edad}) => !esMayorDeEdad({edad})
+const isOverAge = ({age}) => age >= OVER_AGE
+const isUnderAge = ({age}) => !isOverAge({age})
 
-function imprimirSiEsMayorDeEdad(persona) {
-    if (esMayorDeEdad(persona)) {
-        console.log(`${persona.nombre} es mayor de edad.`)
-    } else if (esMenorDeEdad(persona)){
-        console.log(`${persona.nombre} aún no es mayor de edad.`)
+function printIfIsOverAge(person) {
+    if (isOverAge(person)) {
+        console.log(`${person.firstName} es mayor de edad.`)
+    } else {
+        console.log(`${person.firstName} aún no es mayor de edad.`)
     }
 }
 
-function reto(persona){
-    if (esMenorDeEdad(persona)) {
-        console.log(`${persona.nombre} es menor de edad`)
+function challenge(person) {
+    if (isUnderAge(person)) {
+        console.log(`${person.firstName} es menor de edad`)
     } else {
-        console.log(`${persona.nombre} Es mayor de edad`)
+        console.log(`${person.firstName} es mayor de edad`)
     }
 } 
 
-function permitirAcceso(persona) {
-    if (!esMayorDeEdad(persona)) {
+function allowAccess(person) {
+    if (!isOverAge(person)) {
         console.log('ACCESO DENEGADO')
     } else {
-        console.log('Puede pasar')
+        console.log(`${person.firstName} puede pasar`)
     }
 }
 
-imprimirSiEsMayorDeEdad(rafael)
-reto(rafael)
-permitirAcceso(rafael)
+printIfIsOverAge(person1)
+challenge(person1)
+allowAccess(person1)
