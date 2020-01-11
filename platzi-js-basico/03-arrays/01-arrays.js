@@ -1,32 +1,41 @@
 var rafael = {
-    nombre: 'Rafael',
-    apellido: 'Pardo Rodriguez',
-    altura: 1.80,
-    cantidadDeLibros: 123
-}
+  firstName: "Rafael",
+  lastName: "Pardo Rodriguez",
+  height: 1.8,
+  booksAmmount: 123
+};
 var juan = {
-    nombre: 'Juan',
-    apellido: 'Pardo Rodriguez',
-    altura: 1.75,
-    cantidadDeLibros: 43
-}
+  firstName: "Juan",
+  lastName: "Pardo Rodriguez",
+  height: 1.75,
+  booksAmmount: 43
+};
 var martha = {
-    nombre: 'Martha',
-    apellido: 'Rodriguez Mozo',
-    altura: 1.65,
-    cantidadDeLibros: 432
+  firstName: "Martha",
+  lastName: "Rodriguez Mozo",
+  height: 1.65,
+  booksAmmount: 432
+};
+let alejandro = {
+  firstName: "Alejandro",
+  lastName: "Pardo Chávez",
+  height: 1.67,
+  booksAmmount: 53
+};
+// var persons = new Array(rafael, juan, martha, alejandro);
+// var persons = Array(rafael, juan, martha, alejandro);
+var persons = [rafael, juan, martha, alejandro];
+
+console.log(persons[0]);
+console.log(persons[0]["firstName"]);
+for (var i = 0; i < persons.length; i++) {
+  var person = persons[i];
+  console.log(`${person.firstName} tiene ${person.booksAmmount} libros.`);
 }
-var alejandro = {
-    nombre: 'Alejandro',
-    apellido: 'Pardo Chávez',
-    altura: 1.67,
-    cantidadDeLibros: 53
-}
-var personas = [rafael, juan, martha, alejandro]
-console.table(personas)
+console.table(persons);
 
-const reducer = (acum, {cantidadDeLibros}) => acum + cantidadDeLibros
+const reducer = (acum, { booksAmmount }) => acum + booksAmmount;
 
-var totalDeLibros = personas.reduce(reducer, 0)
+let totalDeLibros = persons.reduce(reducer, 0);
 
-console.log(`Entre todos tienen ${totalDeLibros}.`)
+console.log(`Entre todos tienen ${totalDeLibros}. libros`);
