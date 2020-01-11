@@ -1,21 +1,21 @@
-var rafael = {
-    nombre: 'Rafael',
-    apellido: 'Pardo Rodriguez',
-    edad: 20,
+var person1 = {
+    firstName: 'Rafael',
+    lastName: 'Pardo Rodriguez',
+    age: 20,
 }
 
-const MAYORIA_DE_EDAD = 18
+const OVER_AGE = 18
 
-function esMayorDeEdad(persona) {
-    return persona.edad >= MAYORIA_DE_EDAD
+function isOverAge(person) {
+    return person.age >= OVER_AGE
 }
 
-function imprimirSiEsMayorDeEdad(persona) {
-    if (esMayorDeEdad(persona)) {
-        console.log(`${persona.nombre} es mayor de edad.`)
+function printIfIsOverAge(person) {
+    if (isOverAge(person)) {
+        console.log(`${person.firstName} es mayor de edad.`)
     } else {
-        console.log(`${persona.nombre} aún no es mayor de edad.`)
+        console.log(`${person.firstName} aún no es mayor de edad.`)
     }
 }
 
-imprimirSiEsMayorDeEdad(rafael)
+printIfIsOverAge(person1)
