@@ -1,15 +1,16 @@
-var rafael = {
-    nombre: 'Rafael'
+var person1 = {
+    name: 'Rafael'
 }
 
-var otroRafael = {
-    nombre: 'Rafael'
+var anotherPerson1 = {
+    name: 'Rafael'
 }
 
-var otroRafa = {
-    ...rafael
+var anotherPerson = {
+    ...anotherPerson1
 }
 
-console.log(rafael == otroRafael)
-console.log(rafael.nombre == otroRafael.nombre)
-console.log(otroRafa == rafael)
+console.log(person1 == anotherPerson1)
+console.log(person1.name == anotherPerson1.name)
+console.log(anotherPerson == person1)
+console.log(anotherPerson == anotherPerson1)
