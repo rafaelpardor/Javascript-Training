@@ -1,25 +1,25 @@
-var rafael = {
-    nombre: 'Rafael',
-    apellido: 'Pardo Rodriguez',
-    edad: 20,
-    peso: 80
+var person1 = {
+    firstName: 'Rafael',
+    lastName: 'Pardo Rodriguez',
+    age: 20,
+    weight: 70
 }
-console.log(`Àl inicio del año, ${rafael.nombre} pesa ${rafael.peso}KG`)
+console.log(`Àl inicio del año, ${person1.firstName} pesa ${person1.weight}KG`)
 
-const INCREMENTO_PESO = 0.2
-const dias = 365
+const INCREASED_WEIGHT = 0.2
+const DAYS = 365
 
-const aumentarDePeso = perosna => perosna.peso += INCREMENTO_PESO
-const adelgazar = persona => persona.peso -= INCREMENTO_PESO
+const augmentWeight = person => person.weight += INCREASED_WEIGHT
+const reduce = person => person.weight -= INCREASED_WEIGHT
 
-for (var i = 1; i <= dias; i++) {
+for (var i = 1; i <= DAYS; i++) {
     var random = Math.random()
 
     if (random < 0.25) {
-        aumentarDePeso(rafael)
+        augmentWeight(person1)
     } else if (random < 0.5) {
-        adelgazar(rafael)
+        reduce(person1)
     }
 }
 
-console.log(`Àl final del año, ${rafael.nombre} pesa ${rafael.peso.toFixed(2)}KG`)
+console.log(`Àl final del año, ${person1.firstName} pesa ${person1.weight.toFixed(2)}KG`)
