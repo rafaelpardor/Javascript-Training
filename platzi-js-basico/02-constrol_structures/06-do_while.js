@@ -1,9 +1,9 @@
-var contador = 0
+var counter = 0
 
-const llueve = () => Math.random() < 0.25
+const rain = () => Math.random() < 0.25
 
 do {
-    contador++
-} while (!llueve())
+    counter++
+} while (!rain())
 
-console.log(`Fui a ver si llovia ${contador} ${contador==1?"vez":"veces"}.`)
+console.log(`Fui a ver si llovia ${counter} ${counter==1?"vez":"veces"}.`)

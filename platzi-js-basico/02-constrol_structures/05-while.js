@@ -1,30 +1,30 @@
-var rafael = {
-    nombre: 'Rafael',
-    apellido: 'Pardo Rodriguez',
-    edad: 20,
-    peso: 80
+var person1 = {
+    firstName: 'Rafael',
+    lastName: 'Pardo Rodriguez',
+    age: 20,
+    weight: 70
 }
-console.log(`${rafael.nombre} pesa ${rafael.peso}KG`)
+console.log(`${person1.firstName} pesa ${person1.weight}KG`)
 
-const INCREMENTO_PESO = 0.3
+const INCREASED_WEIGHT = 0.3
 
-const aumentarDePeso = perosna => perosna.peso += INCREMENTO_PESO
-const adelgazar = persona => persona.peso -= INCREMENTO_PESO
-const comeMucho = () => Math.random() < 0.3
-const realizaDeporte = () => Math.random() < 0.4
+const augmentWeight = person => person.weight += INCREASED_WEIGHT
+const reduce = person => person.weight -= INCREASED_WEIGHT
+const eatALot = () => Math.random() < 0.3
+const doSports = () => Math.random() < 0.4
 
-const META = rafael.peso - 3
-var dias = 0
-while (rafael.peso > META) {
+const META = person1.weight - 3
+var days = 0
+while (person1.weight > META) {
     // debugger
-    if (comeMucho()) {
-        aumentarDePeso(rafael)
+    if (eatALot()) {
+        augmentWeight(person1)
     }
-    if (realizaDeporte()) {
-        adelgazar(rafael)
+    if (doSports()) {
+        reduce(person1)
     }
-    dias += 1
+    days += 1
 }
 
-console.log(`Pasaron ${dias} días hasta ${rafael.nombre} adelgazo 3KG`)
-console.log(`${rafael.nombre} pesa ${rafael.peso.toFixed(2)}KG`)
+console.log(`Pasaron ${days} días hasta ${person1.firstName} adelgazo 3KG`)
+console.log(`${person1.firstName} pesa ${person1.weight.toFixed(2)}KG`)
