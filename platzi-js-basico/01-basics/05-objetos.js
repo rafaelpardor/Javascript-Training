@@ -1,33 +1,38 @@
-var rafael = {
-    nombre: 'Rafael',
-    apellido: 'Pardo Rodriguez',
-    edad: 20,
+var person1 = {
+    firstName: 'Rafael',
+    lastName: 'Pardo Rodriguez',
+    age: 21,
 }
+console.log("Objeto person1 ->", person1);
 
-var juan = {
-    nombre: 'Juan',
-    apellido: 'Pardo Rodriguez',
-    edad: 24,
+var person2 = {
+    firstName: 'Juan',
+    lastName: 'Pardo Rodriguez',
+    age: 25,
 }
+console.log("Objeto person2 ->", person2);
 
-function imprimirNombreEnMayusculas(persona) {
+function imprimirNombreEnMayusculas(person) {
     // var nombre = persona.nombre
-    var { nombre } = persona
-    console.log(nombre.toUpperCase())
+    var { firstName } = person;
+    console.log(firstName.toUpperCase());
 }
 
-imprimirNombreEnMayusculas(rafael)
-imprimirNombreEnMayusculas(juan)
-imprimirNombreEnMayusculas({ nombre: 'Rafa' })
+imprimirNombreEnMayusculas(person1);
+imprimirNombreEnMayusculas(person2);
+imprimirNombreEnMayusculas({ firstName: 'Linus' });
 
 
-// Creamos un nuevo objeto, logramos que no afecte objetos ya creados
-function cumpleaños1(persona) {
+// Creamos un nuevo objeto, y copiamos un objeto ya creado
+function birthday(person) {
     return{
-        ...persona,
-        edad: persona.edad+1
+        ...person,
+        firstName: "Giotaro",
+        age: person.age+1,
     }
 }
 
-console.log(cumpleaños1(rafael))
-console.log(rafael)
+// New person1
+newPerson1 = birthday(person1);
+console.log(birthday(newPerson1));
+console.log("Person1 sigue sin ser modificado ->", person1);
