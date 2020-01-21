@@ -1,11 +1,12 @@
-var name = 'Rafael', age = 21;
+var name = 'Rafael';
+var age = 21;
 console.log(name, age);
 
 // Funcion basica
-function suma(number) {
+function sum(number) {
 	return number + number
 }
-console.log("Suma:",suma(10))
+console.log("Suma:",sum(10))
 
 function greeting(name, age) {
 	console.log(`${name} tiene ${age} anios`);

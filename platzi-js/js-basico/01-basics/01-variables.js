@@ -1,5 +1,5 @@
-var firstName,
-  lastName = "Pardo";
+var firstName;
+var lastName = "Pardo";
 firstName = "Rafael";
 let age = 21;
 
