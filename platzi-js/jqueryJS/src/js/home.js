@@ -1,25 +1,39 @@
 console.log('Hello World');
 const dontChange = "Pardo";
 
-let change = "@rafaelpardor"
+let change = "@rafaelpardor";
 
 function changeName(newName) {
-  change = newName
+    change = newName
 }
 
-const getUser = new Promise(function(response, err) {
+const getUser2 = new Promise(function (res, err) {
     // CallAPI
-    setTimeout(function() {
+    setTimeout(function () {
         // 3 seconds
-        err();
+        res('Time out');
+    }, 6000)
+});
+
+const getUser = new Promise(function (res, err) {
+    // CallAPI
+    setTimeout(function () {
+        // 3 seconds
+        res('Time out');
     }, 3000)
-})
+});
 
-getUser
-    .then(function(){
+getUser.then(function () {
         console.log('All ok');
-    })
-    .catch(function(){
-        console.log("Error")
-    })
+    }).catch(function (message) {
+        console.log(message)
+    });
 
+Promise.all([
+    getUser,
+    getUser2,
+]).then(function(message){
+    console.log(message);
+}).catch(function(message){
+    console.log(message);
+});
