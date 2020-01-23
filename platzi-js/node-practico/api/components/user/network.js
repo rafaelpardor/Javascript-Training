@@ -2,9 +2,11 @@ const express = require('express');
 const router = express.Router();
 
 const response = require('../../../network/response');
+const controller = require('./controller');
 
 router.get('/', function(req, res){
-    response.success(req, res, 'Response good', 200);
+    const list = controller.list();
+    response.success(req, res, list, 200);
 })
 
 module.exports = router;
