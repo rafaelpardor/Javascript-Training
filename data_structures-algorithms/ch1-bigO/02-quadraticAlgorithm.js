@@ -1,7 +1,7 @@
-function exampleQuadratic(n){
-  for (let i = 0; i < n; i++){
+function exampleQuadratic(n) {
+  for (let i = 0; i < n; i++) {
     console.log(i);
-    for (let j = 0; j < n; j++){
+    for (let j = 0; j < n; j++) {
       console.log(j);
     }
   }
@@ -9,6 +9,6 @@ function exampleQuadratic(n){
 
 main();
 
-function main(){
+function main() {
   exampleQuadratic(5);
 }

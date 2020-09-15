@@ -1,9 +1,9 @@
-function exampleCubic(n){
-  for (let i = 0; i < n; i++){
+function exampleCubic(n) {
+  for (let i = 0; i < n; i++) {
     console.log(i);
-    for (let j = 0; j < n; j++){
+    for (let j = 0; j < n; j++) {
       console.log(j);
-      for (let k = 0; k < n; k++){
+      for (let k = 0; k < n; k++) {
         console.log(k);
       }
     }
@@ -12,6 +12,6 @@ function exampleCubic(n){
 
 main();
 
-function main(){
+function main() {
   exampleCubic(5);
 }
