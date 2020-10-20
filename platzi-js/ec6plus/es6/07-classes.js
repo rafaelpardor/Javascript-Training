@@ -1,5 +1,7 @@
+import { greet } from './greet';
+
 class Calculator {
-  constructor(){
+  constructor() {
     this.valueA = 0;
     this.valueB = 0;
   }
@@ -11,7 +13,6 @@ class Calculator {
 }
 
 const calc = new Calculator();
-console.log(calc.sum(2,2));
+console.log(calc.sum(2, 2));
 
-import * from './greet';
-console.log(hello())
+console.log(greet('John'));

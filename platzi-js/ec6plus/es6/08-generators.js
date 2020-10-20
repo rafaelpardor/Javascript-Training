@@ -1,9 +1,8 @@
 function* helloWorld() {
-  if (true){
+  if (true) {
     yield 'hello';
   }
-  if (true)
-  {
+  if (true) {
     yield 'world';
   }
 }
