@@ -8,6 +8,7 @@ User.prototype.logIn = function() {
   this.online = true;
   console.log(`${this.email} has logged in.`);
 };
+
 User.prototype.logOut = function() {
   this.online = false;
   console.log(`${this.email} has logged out`);
@@ -26,10 +27,11 @@ Admin.prototype.deleteUser = function(u) {
   });
 };
 
-var admin = new Admin("Luis", "luis@gmail.com");
-var userOne = new User("Rafael", "rafael@gmial.com");
-var userTwo = new User("Jose", "jose@gmail.com");
+let admin = new Admin("Luis", "luis@gmail.com");
+let userOne = new User("Rafael", "rafael@gmial.com");
+let userTwo = new User("Jose", "jose@gmail.com");
 
-var users = [userOne, userTwo, admin];
+let users = [userOne, userTwo, admin];
 
 console.log(admin);
+

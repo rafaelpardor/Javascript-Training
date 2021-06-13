@@ -27,12 +27,13 @@ class Admin extends User {
   }
 }
 
-var admin = new Admin("Luigui", "luigui@nintendo.com");
-var userOne = new User("Rafael", "rafael@gmial.com");
-var userTwo = new User("Jose", "jose@gmial.com");
+let admin = new Admin("Luigui", "luigui@nintendo.com");
+let userOne = new User("Rafael", "rafael@gmial.com");
+let userTwo = new User("Jose", "jose@gmial.com");
 
-var users = [admin, userOne, userTwo];
+let users = [admin, userOne, userTwo];
 
 console.log(users)
 admin.deleteUser(userTwo);
 console.log(users);
+

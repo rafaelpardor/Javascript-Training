@@ -19,9 +19,10 @@ class User {
   }
 }
 
-var userOne = new User("Rafael", "rafael@gmial.com");
+let userOne = new User("Rafael", "rafael@gmial.com");
 console.log(userOne);
 userOne
   .logIn()
   .updateScore()
   .logOut();
+

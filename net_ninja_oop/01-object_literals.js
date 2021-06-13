@@ -1,4 +1,4 @@
-var userOne = {
+let userOne = {
   email: "user@mail.com",
   name: "Rafael",
   login() {
@@ -12,3 +12,5 @@ var userOne = {
 console.log(userOne);
 console.log(userOne.name);
 userOne.login();
+userOne.logout();
+

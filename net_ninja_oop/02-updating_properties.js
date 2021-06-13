@@ -1,4 +1,4 @@
-var prop = "name";
+let prop = "name";
 prop = "email";
 
 var userOne = {
@@ -11,11 +11,10 @@ var userOne = {
     console.log(this.email, "Has logged out");
   }
 };
+console.log(userOne);
 
 //
 userOne.name = "Mario";
-console.log(userOne.name);
-userOne.name = "Alejo";
 console.log(userOne.name);
 
 // Dyamic property access
@@ -26,3 +25,4 @@ userOne[prop];
 
 userOne.age = 23;
 userOne.logInfo = function() {};
+
